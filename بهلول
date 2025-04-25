@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قوانين قطاع الاستخبارات – سيرفر الجنوب</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0F0F0F;
+            color: #FFD700;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 2480px;
+            height: 3508px; /* A4 size */
+            padding: 50px;
+            box-sizing: border-box;
+        }
+
+        .title {
+            font-size: 90px;
+            color: white;
+            text-align: center;
+            margin-bottom: 150px;
+        }
+
+        .section-title {
+            font-size: 60px;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .section-content {
+            font-size: 45px;
+            margin-top: 20px;
+        }
+
+        .section-content ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .section-content li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="content">
+        <div class="title">قوانين قطاع الاستخبارات – سيرفر الجنوب</div>
+
+        <div class="section">
+            <div class="section-title">أولاً: الشروط العامة للقبول</div>
+            <div class="section-content">
+                <ul>
+                    <li>أن يكون عمر المتقدم 16 عامًا فما فوق.</li>
+                    <li>أن يكون سجله خالٍ من المخالفات.</li>
+                    <li>اجتياز الاختبار النظري والعملي في الميدان بنجاح.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">ثانيًا: السلوك والانضباط</div>
+            <div class="section-content">
+                <ul>
+                    <li>الحفاظ على السرية التامة لكافة المعلومات والمهام.</li>
+                    <li>الالتزام بالزي الرسمي أو الملابس المدنية حسب طبيعة المهمة.</li>
+                    <li>يُمنع استخدام الصلاحيات لأغراض شخصية أو لتصفية الحسابات.</li>
+                    <li>يُمنع كشف هوية الأعضاء لأي طرف خارجي تحت أي ظرف.</li>
+                    <li>يجب التعامل مع المواطنين أو المتهمين بكل احترام ورقي.</li>
+                    <li>الالتزام الكامل بقوانين الرول بلاي داخل المدينة والقطاع والسيرفر.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script لتحويل الصفحة إلى صورة -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script>
+        window.onload = function() {
+            // تحويل المحتوى إلى صورة باستخدام html2canvas
+            html2canvas(document.getElementById("content")).then(function(canvas) {
+                // حفظ الصورة كملف PNG
+                var img = canvas.toDataURL("image/png");
+                var link = document.createElement("a");
+                link.href = img;
+                link.download = "laws_south_server_intel.png";
+                link.click();
+            });
+        }
+    </script>
+</body>
+</html>
